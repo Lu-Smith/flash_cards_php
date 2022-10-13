@@ -59,11 +59,13 @@ body {
   height: 100%;
   -webkit-backface-visibility: hidden;
           backface-visibility: hidden;
-  box-shadow: 20px 20px 20px rgba(0, 0, 0, 0.2);
+  box-shadow: 12px 12px 10px rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
 }
 
 .card-front {
-  background: dodgerblue;
+  background: linear-gradient(to right, rgb(182, 244, 146), rgb(51, 139, 147));
   display: flex;
   justify-content: center;
   align-items: center;
@@ -71,7 +73,7 @@ body {
 
 .card-back {
   background: #fff;
-  color: #27296d;
+  color: #378E93;
   transform: rotateY(180deg);
   display: flex;
   justify-content: center;
@@ -81,13 +83,18 @@ body {
 @media only screen and (min-width: 786px) {
   .card {
     width: 300px;
-    font-size: 2rem;
+    height: 160px;
+    font-size: 50px;
   }
 }
 @media only screen and (min-width: 1200px) {
+  .main-results {
+    width: 85%;
+  }
   .card {
     width: 350px;
-    font-size: 175px;
+    height: 200px;
+    font-size: 70px;
   }
 }
 .header {
@@ -95,10 +102,12 @@ body {
   position: sticky;
   top: 0;
   z-index: 1;
+  padding: 10px;
+  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
 }
 
 .header, .footer {
-  background: #27296d;
+  background: #378E93;
   color: #fff;
   width: 100%;
   min-height: 60px;
@@ -116,13 +125,21 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 0.6rem;
+  font-size: 0.4rem;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
 }
 
 .header a,
 .footer a {
   color: #fff;
   text-decoration: none;
+  margin: 0 5px;
+  transition: all 200ms ease-in-out;
+}
+
+.header a:hover,
+.footer a:hover {
+  color: #74BF93;
 }
 
 @media only screen and (min-width: 786px) {
@@ -130,7 +147,7 @@ body {
     font-size: 1rem;
   }
   .footer {
-    font-size: 0.8rem;
+    font-size: 0.6rem;
   }
 }
 @media only screen and (min-width: 1024px) {
@@ -176,7 +193,7 @@ body {
 .main-entry_input:focus,
 .main-entry_button:focus {
   outline: none;
-  box-shadow: 20px 20px 20px rgba(0, 0, 0, 0.2);
+  box-shadow: 12px 12px 10px rgba(0, 0, 0, 0.2);
 }
 
 @media only screen and (min-width: 786px) {
@@ -184,8 +201,18 @@ body {
     font-size: 1rem;
   }
   .main-entry_button, .main-entry_input {
-    font-size: 2rem;
-    width: 200px;
-    height: 150px;
+    font-size: 1.4rem;
+    width: 180px;
+    height: 130px;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .main-entry {
+    font-size: 0.8rem;
+  }
+  .main-entry_button, .main-entry_input {
+    font-size: 1.4rem;
+    width: 180px;
+    height: 130px;
   }
 }/*# sourceMappingURL=main.css.map */

@@ -2,6 +2,8 @@
     position: sticky;
     top: 0;
     z-index: 1;
+    padding: 10px;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
 }
 
 .header, .footer {
@@ -21,13 +23,21 @@
     top: calc(100vh - 60px);
     left: 0;
     @include flexCenter;
-    font-size: 0.6rem;
+    font-size: 0.4rem;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif ;
 }
 
 .header a,
 .footer a {
     color: $header-color;
     text-decoration: none;
+    margin: 0 5px;
+    transition: all 200ms ease-in-out;
+}
+
+.header a:hover,
+.footer a:hover {
+    color: #74BF93
 }
 
 @include mq(786px) {
@@ -35,7 +45,7 @@
         font-size: 1rem;
     }
     .footer {
-        font-size: 0.8rem;
+        font-size: 0.6rem;
     }
 }
 
