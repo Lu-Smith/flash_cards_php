@@ -4,6 +4,7 @@
     z-index: 1;
     padding: 10px;
     text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
+    font-size: 20px;
 }
 
 .header, .footer {
@@ -42,15 +43,13 @@
 
 @include mq(786px) {
     .header {
-        font-size: 1rem;
+        font-size: 0.8rem;
     }
     .footer {
         font-size: 0.6rem;
     }
-}
-
-@include mq(1024px) {
     .title-break {
         display: none;
     }
 }
+
