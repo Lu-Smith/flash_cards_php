@@ -5,7 +5,7 @@
    class="main-entry_input"
    id="num"
    name="num"
-   aria-labeledby="enterNumber"
+   aria-labeled="enterNumber"
    type="text"
    maxlength="2"
    autofocus

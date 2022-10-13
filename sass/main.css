@@ -21,6 +21,75 @@ body {
   padding-bottom: 60px;
 }
 
+.main-results {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  flex-grow: 1;
+}
+
+.card {
+  width: 22%;
+  min-width: 150px;
+  min-height: 100px;
+  background: transparent;
+  color: #fff;
+  font-size: 1rem;
+  padding: 1em;
+  margin: 0.25em;
+  outline: none;
+  position: relative;
+  transition: transform 0.6s ease-in-out;
+  transform-style: preserve-3d;
+}
+
+.card:hover,
+.card:focus {
+  transform: rotateY(180deg);
+}
+
+.card-front,
+.card-back {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  box-shadow: 20px 20px 20px rgba(0, 0, 0, 0.2);
+}
+
+.card-front {
+  background: dodgerblue;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card-back {
+  background: #fff;
+  color: #27296d;
+  transform: rotateY(180deg);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media only screen and (min-width: 786px) {
+  .card {
+    width: 300px;
+    font-size: 2rem;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .card {
+    width: 350px;
+    font-size: 175px;
+  }
+}
 .header {
   position: -webkit-sticky;
   position: sticky;
@@ -29,7 +98,7 @@ body {
 }
 
 .header, .footer {
-  background: rgb(124, 46, 46);
+  background: #27296d;
   color: #fff;
   width: 100%;
   min-height: 60px;
@@ -56,7 +125,7 @@ body {
   text-decoration: none;
 }
 
-@media only screen and (min-width: 786) {
+@media only screen and (min-width: 786px) {
   .header {
     font-size: 1rem;
   }
@@ -100,7 +169,7 @@ body {
 }
 
 .main-entry_button {
-  background: limegreen;
+  background: #a393eb;
   color: #fff;
 }
 

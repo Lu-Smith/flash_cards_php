@@ -30,7 +30,7 @@
     text-decoration: none;
 }
 
-@include mq(786) {
+@include mq(786px) {
     .header {
         font-size: 1rem;
     }
